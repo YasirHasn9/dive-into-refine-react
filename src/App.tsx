@@ -7,6 +7,8 @@ import {
   ReadyPage,
   ErrorComponent,
 } from "@pankod/refine-antd";
+// components
+import { PostList } from "pages/posts/lists";
 
 import dataProvider from "@pankod/refine-simple-rest";
 import "@pankod/refine-antd/dist/styles.min.css";
@@ -21,6 +23,7 @@ function App() {
       ReadyPage={ReadyPage}
       catchAll={<ErrorComponent />}
       routerProvider={routerProvider}
+      resources={[{ name: "posts", list: PostList }]}
     />
   );
 }
