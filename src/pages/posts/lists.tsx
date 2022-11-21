@@ -12,6 +12,7 @@ import {
   ShowButton,
   EditButton,
   Space,
+  DeleteButton,
 } from "@pankod/refine-antd";
 
 import { IPost, ICategory } from "interfaces";
@@ -87,6 +88,7 @@ export const PostList: React.FC = () => {
             <Space>
               <ShowButton size='small' recordItemId={record.id} hideText />
               <EditButton size='small' recordItemId={record.id} hideText />
+              <DeleteButton size='small' recordItemId={record.id} hideText />
             </Space>
           )}
         />

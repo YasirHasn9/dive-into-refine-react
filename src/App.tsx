@@ -30,6 +30,8 @@ function App() {
           show: PostShow,
           edit: EditPost,
           create: PostCreate,
+          // canDelete will also provide a delete button on edit page
+          canDelete: true,
         },
       ]}
     />
