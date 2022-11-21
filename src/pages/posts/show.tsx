@@ -1,11 +1,11 @@
 import { useShow, useOne } from "@pankod/refine-core";
 import { Show, Typography, Tag } from "@pankod/refine-antd";
 
-// to pull related data from our api, we need a hook where we can link it to the api <useShow>
+// to pull related data from our api, we need a hook where we can link it to the api 🎯<useShow>
 // this hook enables us to pull/fetch a single record
 import { IPost, ICategory } from "interfaces";
-// Each record may have to have some information, to pull the information individually for each record
-// Refine provides a new hook called useOne where you can pass to it an endpoint that is related to our api
+// Each record may have some information, to pull the information individually for each record
+// Refine provides a new hook called 🎯<seOne> where you can pass to it an endpoint that is related to our api
 // different end point means different resource on our api
 
 const { Title, Text } = Typography;
@@ -14,7 +14,6 @@ export const PostShow = () => {
     queryResult: { data, isLoading },
   } = useShow<IPost>();
   const record = data?.data;
-  // console.log(">>>>", record);
 
   const { data: categoriesInfo } = useOne<ICategory>({
     resource: "categories",

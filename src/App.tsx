@@ -8,7 +8,7 @@ import {
   ErrorComponent,
 } from "@pankod/refine-antd";
 // components
-import { PostList, PostShow, EditPost } from "pages/posts";
+import { PostList, PostShow, EditPost, PostCreate } from "pages/posts";
 
 import dataProvider from "@pankod/refine-simple-rest";
 import "@pankod/refine-antd/dist/styles.min.css";
@@ -29,6 +29,7 @@ function App() {
           list: PostList,
           show: PostShow,
           edit: EditPost,
+          create: PostCreate,
         },
       ]}
     />
