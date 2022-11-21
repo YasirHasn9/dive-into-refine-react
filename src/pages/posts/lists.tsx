@@ -9,6 +9,7 @@ import {
   FilterDropdown,
   Select,
   useSelect,
+  ShowButton,
 } from "@pankod/refine-antd";
 
 import { IPost, ICategory } from "interfaces";
@@ -76,6 +77,13 @@ export const PostList: React.FC = () => {
               </FilterDropdown>
             );
           }}
+        />
+        <Table.Column<IPost>
+          title='Actions'
+          dataIndex='actions'
+          render={(_text, record) => (
+            <ShowButton size='large' recordItemId={record.id} hideText />
+          )}
         />
       </Table>
     </List>
