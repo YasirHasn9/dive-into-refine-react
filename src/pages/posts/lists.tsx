@@ -10,6 +10,8 @@ import {
   Select,
   useSelect,
   ShowButton,
+  EditButton,
+  Space,
 } from "@pankod/refine-antd";
 
 import { IPost, ICategory } from "interfaces";
@@ -82,7 +84,10 @@ export const PostList: React.FC = () => {
           title='Actions'
           dataIndex='actions'
           render={(_text, record) => (
-            <ShowButton size='large' recordItemId={record.id} hideText />
+            <Space>
+              <ShowButton size='small' recordItemId={record.id} hideText />
+              <EditButton size='small' recordItemId={record.id} hideText />
+            </Space>
           )}
         />
       </Table>
